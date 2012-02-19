@@ -36,21 +36,21 @@ if ($_POST['submit']) {
 				<h4><?php echo $success_msg;?></h4>
 				<table>
 					<tr>
-						<td><label>Name:</label></td>
+						<td><label for="name_input">Name:</label></td>
 						<td>
-						<input type="text" name="name_input" placeholder="Your name"/>
+						<input type="text" id="name_input" name="name_input" placeholder="Your name"/>
 						</td>
 					</tr>
 					<tr>
-						<td><label>Email:</label></td>
+						<td><label for="email_input">Email:</label></td>
 						<td>
-						<input type="email" name="email_input" placeholder="Your email"/>
+						<input type="email" id="email_input" name="email_input" placeholder="Your email"/>
 						</td>
 					</tr>
 					<tr>
-						<td><label>Faculty Number:</label></td>
+						<td><label for="number_input">Faculty Number:</label></td>
 						<td>
-						<input type="text" name="number_input" placeholder="Your faculty number"/>
+						<input type="text" id="number_input" name="number_input" placeholder="Your faculty number"/>
 						</td>
 					</tr>
 					<tr>
