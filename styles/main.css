@@ -1,0 +1,114 @@
+/* START OF RESETER */
+html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 0;
+	font-family: 'Arial';
+	font-size: 13px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	/* border-collapse: collapse; */
+	border-spacing: 0;
+}
+/* END OF RESETER */
+
+html {
+	background: none repeat scroll 0 0 #FBFBFB;
+}
+#container {
+	width: 455px;
+	padding: 114px 0 0;
+	margin: 0 auto;
+}
+#loginform {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #E5E5E5;
+	padding: 4px 24px 15px;
+	-moz-box-shadow: rgba(200,200,200,0.7) 0 4px 10px -1px;
+	-webkit-box-shadow: rgba(200,200,200,0.7) 0 4px 10px -1px;
+	box-shadow: rgba(200,200,200,0.7) 0 4px 10px -1px;
+}
+#form-title {
+	font-size: 26px;
+	font-weight: bold;
+	line-height: 1;
+	margin-bottom: 10px;
+	color: #1e4d64;
+	padding-bottom: 5px;
+}
+span {
+	color: #2e3234;
+}
+.logo {
+	width: 132px;
+	margin-left: 150px;
+	margin-bottom: 10px;
+}
+td {
+	padding-bottom: 5px;
+	padding-right: 10px;
+}
+label {
+	color: #777777;
+	font-size: 14px;
+}
+.input {
+	border-radius: 2px;
+	font-weight: 200;
+	font-size: 24px;
+	line-height: 1;
+	width: 100%;
+	padding: 2px;
+	margin-bottom: 16px;
+	border: 1px solid #E5E5E5;
+	background: #FBFBFB;
+	outline: none;
+	-moz-box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
+	-webkit-box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
+	box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
+}
+.submit {
+	float: right;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 17px;
+	padding-top: 6px;
+	padding-right: 8px;
+	padding-bottom: 6px;
+	padding-left: 8px;
+	text-decoration: none;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-box-shadow: 0px 1px 3px #666666;
+	-moz-box-shadow: 0px 1px 3px #666666;
+	text-shadow: 1px 1px 3px #666666;
+	border: solid #1d4f82 1px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#3b82a3), to(#2a6988));
+	background: -moz-linear-gradient(top, #3b82a3, #2a6988);
+	-ms-filter: progid :DXImageTransform.Microsoft.gradient(startColorStr=#3b82a3, endColorStr=#2a6988);
+	filter: progid :DXImageTransform.Microsoft.gradient(startColorStr=#3b82a3, endColorStr=#2a6988);
+	display: inline-block; /* IE is so silly */
+}
+.submit:hover {
+	background: #549fc2;
+}
