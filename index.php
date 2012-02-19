@@ -3,10 +3,12 @@ require_once "includes.php";
 
 $error_msg = "";
 $success_msg = "";
+$captchaHtml = $areYouHuman -> getPublisherHTML();
 
 if ($_POST['submit']) {
 	if (Post_Controller::validate($_POST['name_input']) && Post_Controller::validate($_POST['email_input']) && Post_Controller::validate($_POST['number_input'])) {
 		//captcha validation
+		Captcha_Controller::validate($areYouHuman);
 
 		if (Email_Controller::validate($_POST['email_input'])) {
 			$sql = "INSERT INTO students(name, email, faculty_number) VALUES (? , ? , ?)";
@@ -53,15 +55,11 @@ if ($_POST['submit']) {
 						<input type="text" id="number_input" name="number_input" placeholder="Your faculty number"/>
 						</td>
 					</tr>
-					<tr>
-						<!-- CAPTCHA PLACEHOLDER -->
-					</tr>
-					<tr>
-						<td>
-						<input type="submit" name="submit" value="Enroll" />
-						</td>
-					</tr>
 				</table>
+				<div id="captcha">
+					<?php echo $captchaHtml;?>
+				</div>
+				<input type="submit" name="submit" value="Enroll" />
 			</form>
 		</div>
 	</body>

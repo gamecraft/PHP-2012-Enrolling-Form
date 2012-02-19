@@ -1,3 +1,5 @@
 config/db_config.php
 .project
-classes/recaptchalib.php
+classes/ayah_config.php
+classes/ayah.php
+classes/json.php
