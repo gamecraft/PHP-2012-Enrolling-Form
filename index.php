@@ -1,28 +1,30 @@
 <?php
 require_once "includes.php";
 
-$error_msg = "";
-$success_msg = "";
+$errorMsg = "";
+$successMsg = "";
 $captchaHtml = $areYouHuman -> getPublisherHTML();
 
 if ($_POST['submit']) {
-	if (Post_Controller::validate($_POST['name_input']) && Post_Controller::validate($_POST['email_input']) && Post_Controller::validate($_POST['number_input'])) {
+	if (Post_Controller::validate($_POST["name_input"]) && Post_Controller::validate($_POST["email_input"]) && Post_Controller::validate($_POST["number_input"])) {
 		//captcha validation
 		//Captcha_Controller::validate($areYouHuman);
 
 		if (Email_Controller::validate($_POST['email_input'])) {
 			$sql = "INSERT INTO students(name, email, faculty_number) VALUES (? , ? , ?)";
 			try {
-				$database -> exec($sql, array($_POST['name_input'], $_POST['email_input'], $_POST['number_input']));
+				$database -> exec($sql, array($_POST["name_input"], $_POST["email_input"], $_POST["number_input"]));
+				$successMsg = "Enrolled. Check your email!";
+				Email_Controller::emailEnrollmentInformation($_POST["email_input"]);
 			} catch (Exception $e) {
-				$error_msg = "Existing student";
+				$errorMsg = "Existing student";
 			}
 
 		} else {
-			$error_msg = 'Incorrect email';
+			$errorMsg = "Incorrect email";
 		}
 	} else {
-		$error_msg = "Please fill all the inputs.";
+		$errorMsg = "Please fill all the inputs.";
 	}
 }
 ?>
@@ -38,8 +40,8 @@ if ($_POST['submit']) {
 			<img class="logo" src="images/php_logo.png" height="67px" weight="132px"/>
 			<div id="form-title">Web Programming with PHP 2012</div>
 			<form id ="loginform" action="" method="post">
-				<h4><?php echo $error_msg;?></h4>
-				<h4><?php echo $success_msg;?></h4>
+				<h4><?php echo $errorMsg;?></h4>
+				<h4><?php echo $successMsg;?></h4>
 				<table>
 					<tr>
 						<td><label for="name_input">Name:</label></td>

@@ -51,4 +51,18 @@ class Email_Controller {
 		return $isValid;
 	}
 
+	public static function emailEnrollmentInformation($to) {
+		$to = trim(htmlspecialchars(str_replace(array("\r\n", "\r", "\0"), array("\n", "\n", ''), $to), ENT_COMPAT, 'UTF-8'));
+
+		$subject = "Записан си в курса Web Програмиране с PHP 2012";
+
+		$message = "Сайтът за курса е : http://php.dev.bg/ \n";
+		$message .= "Twitter акаунта за курса е : @phpfmi \n";
+		$message .= "Ранглистата се намира на следния адрес : http://game-craft.com/php2012/leaderboard/";
+
+		$headers = "From: radoslavjg@fmi.uni-sofia.bg" . "\r\n" . "Reply-To: radoslavjg@fmi.uni-sofia.bg" . "\r\n" . "X-Mailer: PHP/" . phpversion();
+
+		mail($to, $subject, $message, $headers);
+	}
+
 }
