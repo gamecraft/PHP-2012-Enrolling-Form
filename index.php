@@ -8,7 +8,7 @@ $captchaHtml = $areYouHuman -> getPublisherHTML();
 if ($_POST['submit']) {
 	if (Post_Controller::validate($_POST['name_input']) && Post_Controller::validate($_POST['email_input']) && Post_Controller::validate($_POST['number_input'])) {
 		//captcha validation
-		Captcha_Controller::validate($areYouHuman);
+		//Captcha_Controller::validate($areYouHuman);
 
 		if (Email_Controller::validate($_POST['email_input'])) {
 			$sql = "INSERT INTO students(name, email, faculty_number) VALUES (? , ? , ?)";
