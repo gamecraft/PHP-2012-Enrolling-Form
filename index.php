@@ -29,37 +29,47 @@ if ($_POST['submit']) {
 
 <!DOCTYPE html>
 <html>
-	<title> PHP 2012 </title>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles/main.css" />
+		<title> Web Programming with PHP 2012 Enrolling </title>
+	</head>
 	<body>
 		<div id="container">
-			<form action="" method="post">
-				<h3>Enrolling for Web Programming with PHP 2012</h3>
+			<img class="logo" src="images/php_logo.png" height="67px" weight="132px"/>
+			<div id="form-title">Web Programming with PHP 2012</div>
+			<form id ="loginform" action="" method="post">
 				<h4><?php echo $error_msg;?></h4>
 				<h4><?php echo $success_msg;?></h4>
 				<table>
 					<tr>
 						<td><label for="name_input">Name:</label></td>
 						<td>
-						<input type="text" id="name_input" name="name_input" placeholder="Your name"/>
+						<input type="text" id="name_input" name="name_input" placeholder="Your name" class="input"/>
 						</td>
 					</tr>
 					<tr>
 						<td><label for="email_input">Email:</label></td>
 						<td>
-						<input type="email" id="email_input" name="email_input" placeholder="Your email"/>
+						<input type="email" id="email_input" class="input" name="email_input" placeholder="Your email"/>
 						</td>
 					</tr>
 					<tr>
 						<td><label for="number_input">Faculty Number:</label></td>
 						<td>
-						<input type="text" id="number_input" name="number_input" placeholder="Your faculty number"/>
+						<input type="text" id="number_input" class="input" name="number_input" placeholder="Your faculty number"/>
+						</td>
+					</tr>
+					<tr>
+						<div id="captcha">
+							<?php echo $captchaHtml;?>
+						</div>
+					</tr>
+					<tr>
+						<td>
+						<input type="submit" class="submit" name="submit" value="Submit" />
 						</td>
 					</tr>
 				</table>
-				<div id="captcha">
-					<?php echo $captchaHtml;?>
-				</div>
-				<input type="submit" name="submit" value="Enroll" />
 			</form>
 		</div>
 	</body>
