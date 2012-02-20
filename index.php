@@ -62,6 +62,7 @@ if ($_POST['submit']) {
 						</td>
 					</tr>
 					<tr>
+						<td></td>
 						<td>
 						<input type="submit" class="submit" name="submit" value="Submit" />
 						</td>
