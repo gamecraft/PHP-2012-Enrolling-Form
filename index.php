@@ -60,11 +60,6 @@ if ($_POST['submit']) {
 						</td>
 					</tr>
 					<tr>
-						<div id="captcha">
-							<?php echo $captchaHtml;?>
-						</div>
-					</tr>
-					<tr>
 						<td>
 						<input type="submit" class="submit" name="submit" value="Submit" />
 						</td>
